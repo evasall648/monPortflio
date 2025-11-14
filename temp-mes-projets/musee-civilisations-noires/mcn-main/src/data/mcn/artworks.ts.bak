@@ -1,0 +1,458 @@
+﻿import artworkMask from "@/assets/artwork-mask.jpg";
+import artworkBronze from "@/assets/artwork-bronze.jpg";
+import artworkTextile from "@/assets/artwork-textile.jpg";
+import heroMuseum from "@/assets/hero-museum.jpg";
+
+export interface MCNArtwork {
+  id: string;
+  title: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  description: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  period: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  culture: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  origin: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  materials: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  dimensions: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  image: string;
+  additionalImages?: string[];
+  hasAudio: boolean;
+  audioUrl?: string;
+  historicalContext: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  culturalSignificance: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  qrCode: string;
+  location: {
+    floor: string;
+    room: string;
+    position: string;
+  };
+  curator: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  acquisition: {
+    fr: string;
+    en: string;
+    wo: string;
+  };
+  relatedArtworks: string[];
+  tags: string[];
+}
+
+export const mcnArtworks: MCNArtwork[] = [
+  {
+    id: "mcn-mask-001",
+    title: {
+      fr: "Masque CÃ©rÃ©moniel Wolof",
+      en: "Wolof Ceremonial Mask",
+      wo: "Masque CÃ©rÃ©moniel bu Wolof"
+    },
+    description: {
+      fr: "Ce masque cÃ©rÃ©moniel wolof en bois sculptÃ© reprÃ©sente une figure spirituelle importante dans les rites d'initiation. Les motifs gÃ©omÃ©triques complexes symbolisent la sagesse ancestrale et la connexion avec le monde invisible. Le masque Ã©tait portÃ© lors des cÃ©rÃ©monies de passage Ã  l'Ã¢ge adulte et des cÃ©lÃ©brations importantes de la communautÃ©.",
+      en: "This Wolof ceremonial wooden mask represents an important spiritual figure in initiation rites. The complex geometric patterns symbolize ancestral wisdom and connection with the invisible world. The mask was worn during rites of passage to adulthood and important community celebrations.",
+      wo: "Bii masque cÃ©rÃ©moniel bu Wolof bu sculpted bu bois dafa mel ni figure spirituelle bu important ci rites d'initiation. Motifs gÃ©omÃ©triques yu complex daÃ±u mel ni sagesse ancestrale ak connexion ak aduna bu gis-gis. Masque bi daÃ±u koy set ci rites de passage ci mag ak celebrations yu important yu communautÃ©."
+    },
+    period: {
+      fr: "XVIIIe siÃ¨cle",
+      en: "18th Century",
+      wo: "18e siÃ¨cle"
+    },
+    culture: {
+      fr: "Wolof",
+      en: "Wolof",
+      wo: "Wolof"
+    },
+    origin: {
+      fr: "Royaume du Cayor, SÃ©nÃ©gal",
+      en: "Kingdom of Cayor, Senegal",
+      wo: "RÃ©ewum Cayor, Senegaal"
+    },
+    materials: {
+      fr: "Bois de fromager, pigments naturels, fibres vÃ©gÃ©tales",
+      en: "Ceiba wood, natural pigments, plant fibers",
+      wo: "Bois bu fromager, pigments naturels, fibres vÃ©gÃ©tales"
+    },
+    dimensions: {
+      fr: "45 cm Ã— 28 cm Ã— 15 cm",
+      en: "45 cm Ã— 28 cm Ã— 15 cm",
+      wo: "45 cm Ã— 28 cm Ã— 15 cm"
+    },
+    image: artworkMask,
+    additionalImages: [artworkBronze, artworkTextile, heroMuseum],
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/mask-001-fr.mp3",
+    historicalContext: {
+      fr: "Les masques wolof Ã©taient des objets sacrÃ©s utilisÃ©s dans les cÃ©rÃ©monies d'initiation des jeunes hommes. Ils incarnent les esprits ancestraux et servent de mÃ©diateurs entre le monde visible et invisible. Le Royaume du Cayor Ã©tait l'un des plus puissants empires wolof du SÃ©nÃ©gal prÃ©colonial.",
+      en: "Wolof masks were sacred objects used in young men's initiation ceremonies. They embody ancestral spirits and serve as mediators between the visible and invisible world. The Kingdom of Cayor was one of the most powerful Wolof empires in pre-colonial Senegal.",
+      wo: "Masque yu Wolof daÃ±u nekk objets sacrÃ©s yu jÃ«kk ci ceremonies d'initiation yu gÃ³or yu ndaw. DaÃ±u mel ni esprits ancestraux te daÃ±u joxe mÃ©diation ci biir aduna bu gisoo ak bii gis-gis. RÃ©ewum Cayor dafa nekk ni beneen ci empire yu gÃ«rÃ« yu Wolof ci Senegaal bu jÃ«kk colonial."
+    },
+    culturalSignificance: {
+      fr: "Ce masque reprÃ©sente l'importance de la tradition orale et de la transmission des connaissances dans la sociÃ©tÃ© wolof. Il symbolise la continuitÃ© culturelle et le respect des ancÃªtres, valeurs fondamentales de la civilisation wolof.",
+      en: "This mask represents the importance of oral tradition and knowledge transmission in Wolof society. It symbolizes cultural continuity and respect for ancestors, fundamental values of Wolof civilization.",
+      wo: "Bii masque dafa wone ni importance bu tradition orale ak transmission bu xam-xam ci sociÃ©tÃ© wolof. Dafa mel ni continuitÃ© culturelle ak respect ci jabari, valeurs fondamentales bu civilisation wolof."
+    },
+    qrCode: "MCN-MASK-001",
+    location: {
+      floor: "1er Ã©tage",
+      room: "Salle des Traditions",
+      position: "Vitrine A-3"
+    },
+    curator: {
+      fr: "Dr. Aminata Sow, Conservatrice en chef",
+      en: "Dr. Aminata Sow, Chief Curator",
+      wo: "Dr. Aminata Sow, Conservatrice bu jÃ«kk"
+    },
+    acquisition: {
+      fr: "Donation de la famille Diop, 2019",
+      en: "Donation from the Diop family, 2019",
+      wo: "Donation ci famille Diop, 2019"
+    },
+    relatedArtworks: ["mcn-bronze-001", "mcn-textile-001"],
+    tags: ["masque", "wolof", "cÃ©rÃ©monie", "bois", "spiritualitÃ©"]
+  },
+  {
+    id: "mcn-bronze-001",
+    title: {
+      fr: "Sculpture Royale en Bronze",
+      en: "Royal Bronze Sculpture",
+      wo: "Sculpture Royale bu Bronze"
+    },
+    description: {
+      fr: "Cette sculpture en bronze reprÃ©sente un roi sÃ©nÃ©galais dans sa tenue de cÃ©rÃ©monie complÃ¨te. Le travail dÃ©taillÃ© du mÃ©tal tÃ©moigne du savoir-faire exceptionnel des artisans de l'Ã©poque. La posture majestueuse et les dÃ©tails ornementaux reflÃ¨tent le pouvoir et la dignitÃ© royale.",
+      en: "This bronze sculpture depicts a Senegalese king in full ceremonial attire. The detailed metalwork demonstrates the exceptional craftsmanship of artisans of the era. The majestic posture and ornamental details reflect royal power and dignity.",
+      wo: "Bii sculpture bu bronze dafa wone ni boroom bu Senegaal ci sunukaay bu ceremony bu leer. LiggÃ©ey bu detail bu metal dafa wone ni savoir-faire exceptionnel bu artisans yu waxtu. Posture bu majestueux ak details yu ornamental daÃ±u wone pouvoir royal ak dignitÃ©."
+    },
+    period: {
+      fr: "XVIe siÃ¨cle",
+      en: "16th Century",
+      wo: "16e siÃ¨cle"
+    },
+    culture: {
+      fr: "Royaume du Djolof",
+      en: "Djolof Kingdom",
+      wo: "RÃ©ewum Djolof"
+    },
+    origin: {
+      fr: "Djolof, SÃ©nÃ©gal",
+      en: "Djolof, Senegal",
+      wo: "Djolof, Senegaal"
+    },
+    materials: {
+      fr: "Bronze, cuivre, alliages mÃ©talliques",
+      en: "Bronze, copper, metal alloys",
+      wo: "Bronze, cuivre, alliages mÃ©talliques"
+    },
+    dimensions: {
+      fr: "62 cm Ã— 35 cm Ã— 25 cm",
+      en: "62 cm Ã— 35 cm Ã— 25 cm",
+      wo: "62 cm Ã— 35 cm Ã— 25 cm"
+    },
+    image: artworkBronze,
+    additionalImages: [artworkMask, artworkTextile, heroMuseum],
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/bronze-001-fr.mp3",
+    historicalContext: {
+      fr: "Le Royaume du Djolof Ã©tait l'un des plus puissants empires d'Afrique de l'Ouest. Ses artisans maÃ®trisaient l'art de la fonte du bronze, technique importÃ©e puis perfectionnÃ©e localement. Cette sculpture tÃ©moigne de la richesse et du raffinement de la cour royale djolof.",
+      en: "The Djolof Kingdom was one of the most powerful empires in West Africa. Its artisans mastered the art of bronze casting, a technique imported and then perfected locally. This sculpture testifies to the wealth and refinement of the Djolof royal court.",
+      wo: "RÃ©ewum Djolof dafa nekk ni beneen ci empire yu gÃ«rÃ« yu Africa de l'Ouest. Artisans yu nekk daÃ±u xam liggÃ©ey fonte bu bronze, technique bu importÃ© te perfectionnÃ©e ci biir rÃ©ew. Bii sculpture dafa wone ni richesse ak raffinement bu cour royal djolof."
+    },
+    culturalSignificance: {
+      fr: "Cette sculpture symbolise l'autoritÃ© royale et la continuitÃ© dynastique dans la sociÃ©tÃ© djolof. Elle reprÃ©sente l'idÃ©al du souverain juste et puissant, garant de l'ordre social et de la prospÃ©ritÃ© du royaume.",
+      en: "This sculpture symbolizes royal authority and dynastic continuity in Djolof society. It represents the ideal of the just and powerful sovereign, guarantor of social order and kingdom prosperity.",
+      wo: "Bii sculpture dafa mel ni autoritÃ© royal ak continuitÃ© dynastique ci sociÃ©tÃ© djolof. Dafa wone idÃ©al bu souverain bu just ak gÃ«rÃ«, garant bu ordre social ak prospÃ©ritÃ© bu rÃ©ew."
+    },
+    qrCode: "MCN-BRONZE-001",
+    location: {
+      floor: "1er Ã©tage",
+      room: "Salle Royale",
+      position: "PiÃ©destal central"
+    },
+    curator: {
+      fr: "Dr. Cheikh MbackÃ©, Conservateur",
+      en: "Dr. Cheikh MbackÃ©, Curator",
+      wo: "Dr. Cheikh MbackÃ©, Conservateur"
+    },
+    acquisition: {
+      fr: "Fouilles archÃ©ologiques, site de Ndiadiane Ndiaye, 2018",
+      en: "Archaeological excavations, Ndiadiane Ndiaye site, 2018",
+      wo: "Fouilles archÃ©ologiques, site Ndiadiane Ndiaye, 2018"
+    },
+    relatedArtworks: ["mcn-mask-001", "mcn-textile-001"],
+    tags: ["bronze", "royal", "djolof", "sculpture", "pouvoir"]
+  },
+  {
+    id: "mcn-textile-001",
+    title: {
+      fr: "Textile CÃ©rÃ©moniel SÃ©rÃ¨re",
+      en: "Serer Ceremonial Textile",
+      wo: "Textile CÃ©rÃ©moniel bu Seereer"
+    },
+    description: {
+      fr: "Ce textile aux motifs gÃ©omÃ©triques complexes Ã©tait rÃ©servÃ© aux cÃ©rÃ©monies royales et religieuses. Chaque couleur et motif a une signification symbolique profonde liÃ©e aux traditions ancestrales sÃ©rÃ¨res. Le tissage complexe tÃ©moigne du savoir-faire exceptionnel des tisserands de l'Ã©poque.",
+      en: "This textile with complex geometric patterns was reserved for royal and religious ceremonies. Each color and pattern has deep symbolic meaning linked to Serer ancestral traditions. The complex weaving demonstrates the exceptional skill of weavers of the era.",
+      wo: "Bii textile bu am motifs gÃ©omÃ©triques yu complex daÃ±u ko jagle ceremonies yu royal ak religieuses. Benn benn couleur ak motif am na signification symbolique bu rÃ«y ci traditions ancestrales yu Seereer. Tissage bu complex dafa wone ni savoir-faire exceptionnel bu tisserands yu waxtu."
+    },
+    period: {
+      fr: "XIXe siÃ¨cle",
+      en: "19th Century",
+      wo: "19e siÃ¨cle"
+    },
+    culture: {
+      fr: "SÃ©rÃ¨re",
+      en: "Serer",
+      wo: "Seereer"
+    },
+    origin: {
+      fr: "Sine-Saloum, SÃ©nÃ©gal",
+      en: "Sine-Saloum, Senegal",
+      wo: "Sine-Saloum, Senegaal"
+    },
+    materials: {
+      fr: "Coton, fibres de baobab, teintures vÃ©gÃ©tales",
+      en: "Cotton, baobab fibers, plant dyes",
+      wo: "Coton, fibres bu baobab, teintures vÃ©gÃ©tales"
+    },
+    dimensions: {
+      fr: "180 cm Ã— 120 cm",
+      en: "180 cm Ã— 120 cm",
+      wo: "180 cm Ã— 120 cm"
+    },
+    image: artworkTextile,
+    additionalImages: [artworkMask, artworkBronze, heroMuseum],
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/textile-001-fr.mp3",
+    historicalContext: {
+      fr: "Les textiles sÃ©rÃ¨res sont rÃ©putÃ©s pour leur qualitÃ© et leurs motifs distinctifs. Ils jouaient un rÃ´le important dans les Ã©changes commerciaux et les alliances entre royaumes. Ce textile tÃ©moigne de la richesse culturelle et de l'importance du commerce dans la rÃ©gion du Sine-Saloum.",
+      en: "Serer textiles are renowned for their quality and distinctive patterns. They played an important role in trade and alliances between kingdoms. This textile testifies to the cultural richness and importance of trade in the Sine-Saloum region.",
+      wo: "Textile yu Seereer daÃ±u bari ak seen qualitÃ© ak motifs yu distinctifs. DaÃ±u am rÃ´le bu important ci commerce ak alliances ci biir rÃ©ewu. Bii textile dafa wone ni richesse culturelle ak importance bu commerce ci rÃ©gion Sine-Saloum."
+    },
+    culturalSignificance: {
+      fr: "Ce textile reprÃ©sente l'importance de l'artisanat fÃ©minin dans la sociÃ©tÃ© sÃ©rÃ¨re. Il symbolise la transmission des savoirs ancestraux et le rÃ´le des femmes comme gardiennes de la tradition culturelle.",
+      en: "This textile represents the importance of women's craftsmanship in Serer society. It symbolizes the transmission of ancestral knowledge and the role of women as guardians of cultural tradition.",
+      wo: "Bii textile dafa wone ni importance bu artisanat fÃ©minin ci sociÃ©tÃ© seereer. Dafa mel ni transmission bu xam-xam ancestral ak rÃ´le bu jigÃ©en yi ni gardiennes bu tradition culturelle."
+    },
+    qrCode: "MCN-TEXTILE-001",
+    location: {
+      floor: "2e Ã©tage",
+      room: "Salle des Textiles",
+      position: "Vitrine B-7"
+    },
+    curator: {
+      fr: "Dr. Fatou Sarr, Conservatrice",
+      en: "Dr. Fatou Sarr, Curator",
+      wo: "Dr. Fatou Sarr, Conservatrice"
+    },
+    acquisition: {
+      fr: "Collection privÃ©e, acquis en 2020",
+      en: "Private collection, acquired in 2020",
+      wo: "Collection privÃ©e, acquis ci 2020"
+    },
+    relatedArtworks: ["mcn-mask-001", "mcn-bronze-001"],
+    tags: ["textile", "sÃ©rÃ¨re", "cÃ©rÃ©monie", "tissage", "femme"]
+  },
+  {
+    id: "mcn-contemporary-001",
+    title: {
+      fr: "Renaissance Africaine",
+      en: "African Renaissance",
+      wo: "Renaissance Africaine"
+    },
+    description: {
+      fr: "Cette Å“uvre contemporaine de l'artiste sÃ©nÃ©galais Ousmane Sow reprÃ©sente la renaissance culturelle africaine. MÃªlant techniques traditionnelles et modernes, elle symbolise l'Ã©mergence d'une nouvelle identitÃ© africaine fiÃ¨re de ses racines.",
+      en: "This contemporary work by Senegalese artist Ousmane Sow represents African cultural renaissance. Blending traditional and modern techniques, it symbolizes the emergence of a new African identity proud of its roots.",
+      wo: "Bii liggÃ©ey contemporain ci artiste bu Senegaal Ousmane Sow dafa wone renaissance culturelle africaine. Dafa mel techniques tradisyonel ak modernes, dafa mel ni Ã©mergence bu identitÃ© africaine bu bari ak seen racines."
+    },
+    period: {
+      fr: "2010",
+      en: "2010",
+      wo: "2010"
+    },
+    culture: {
+      fr: "Contemporain",
+      en: "Contemporary",
+      wo: "Contemporain"
+    },
+    origin: {
+      fr: "Dakar, SÃ©nÃ©gal",
+      en: "Dakar, Senegal",
+      wo: "Dakar, Senegaal"
+    },
+    materials: {
+      fr: "Bronze, acier, pigments",
+      en: "Bronze, steel, pigments",
+      wo: "Bronze, acier, pigments"
+    },
+    dimensions: {
+      fr: "250 cm Ã— 180 cm Ã— 120 cm",
+      en: "250 cm Ã— 180 cm Ã— 120 cm",
+      wo: "250 cm Ã— 180 cm Ã— 120 cm"
+    },
+    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=800&fit=crop",
+    additionalImages: [artworkMask, artworkBronze, artworkTextile, heroMuseum],
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/renaissance-001-fr.mp3",
+    historicalContext: {
+      fr: "Cette sculpture monumentale a Ã©tÃ© crÃ©Ã©e pour commÃ©morer le 50e anniversaire de l'indÃ©pendance du SÃ©nÃ©gal. Elle reprÃ©sente l'Ã©volution de l'identitÃ© africaine et la fiertÃ© retrouvÃ©e aprÃ¨s des siÃ¨cles de colonisation.",
+      en: "This monumental sculpture was created to commemorate the 50th anniversary of Senegal's independence. It represents the evolution of African identity and regained pride after centuries of colonization.",
+      wo: "Bii sculpture monumentale daÃ±u ko def ngir commÃ©morer 50e anniversaire bu independence bu Senegaal. Dafa wone Ã©volution bu identitÃ© africaine ak fiertÃ© bu gis ci nderet ci siÃ¨cles yu colonisation."
+    },
+    culturalSignificance: {
+      fr: "Cette Å“uvre symbolise la rÃ©silience et la renaissance de l'Afrique. Elle reprÃ©sente l'espoir et la dÃ©termination des peuples africains Ã  construire leur propre destin tout en honorant leur hÃ©ritage culturel.",
+      en: "This work symbolizes Africa's resilience and renaissance. It represents the hope and determination of African peoples to build their own destiny while honoring their cultural heritage.",
+      wo: "Bii liggÃ©ey dafa mel ni rÃ©silience ak renaissance bu Africa. Dafa wone ni xel ak dÃ©termination bu Ã±i ci Africa ngir def seen destinÃ©e te daÃ±u jÃ«kk ci seen patrimoine culturel."
+    },
+    qrCode: "MCN-CONTEMPORARY-001",
+    location: {
+      floor: "Rez-de-chaussÃ©e",
+      room: "Hall principal",
+      position: "Centre du hall"
+    },
+    curator: {
+      fr: "Dr. Ibrahima Thiam, Conservateur",
+      en: "Dr. Ibrahima Thiam, Curator",
+      wo: "Dr. Ibrahima Thiam, Conservateur"
+    },
+    acquisition: {
+      fr: "Donation de l'artiste, 2010",
+      en: "Artist donation, 2010",
+      wo: "Donation ci artiste, 2010"
+    },
+    relatedArtworks: ["mcn-bronze-001"],
+    tags: ["contemporain", "renaissance", "indÃ©pendance", "identitÃ©", "espoir"]
+  }
+,
+  {
+    id: "mcn-mask-002",
+    title: { fr: "Masque de Fête Wolof", en: "Wolof Festive Mask", wo: "Masque bu Fes Wolof" },
+    description: {
+      fr: "Masque utilisé lors des célébrations communautaires, orné de motifs symboliques.",
+      en: "Mask used during community celebrations, adorned with symbolic patterns.",
+      wo: "Masque bu ñu jëfandikoo ci celebration yu communauté, am na motifs yu symboliques."
+    },
+    period: { fr: "XIXe siècle", en: "19th Century", wo: "19e siècle" },
+    culture: { fr: "Wolof", en: "Wolof", wo: "Wolof" },
+    origin: { fr: "Région de Thiès, Sénégal", en: "Thiès region, Senegal", wo: "Thiès, Senegaal" },
+    materials: { fr: "Bois, pigments naturels", en: "Wood, natural pigments", wo: "Bois, pigments naturels" },
+    dimensions: { fr: "40 cm  25 cm  12 cm", en: "40 cm  25 cm  12 cm", wo: "40 cm  25 cm  12 cm" },
+    image: artworkMask,
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/mask-001-fr.mp3",
+    historicalContext: {
+      fr: "Les masques de fête renforçaient les liens sociaux et la transmission culturelle.",
+      en: "Festive masks reinforced social bonds and cultural transmission.",
+      wo: "Masque yu fête dañu yokk jàmm ak yokkale xam-xam culturel."
+    },
+    culturalSignificance: {
+      fr: "Symbole d'unité et de mémoire collective.",
+      en: "Symbol of unity and collective memory.",
+      wo: "Simbolu benn-bokk ak xel bu bokk."
+    },
+    qrCode: "MCN-MASK-002",
+    location: { floor: "1er étage", room: "Salle des Traditions", position: "Vitrine A-4" },
+    curator: { fr: "Équipe de conservation", en: "Conservation team", wo: "Équipe conservation" },
+    acquisition: { fr: "Dépôt long terme, 2021", en: "Long-term loan, 2021", wo: "Depot long terme, 2021" },
+    relatedArtworks: ["mcn-mask-001"],
+    tags: ["masque", "wolof", "fête"]
+  },
+  {
+    id: "mcn-bronze-002",
+    title: { fr: "Buste en Bronze", en: "Bronze Bust", wo: "Buste bu Bronze" },
+    description: {
+      fr: "Buste finement ciselé représentant un dignitaire.",
+      en: "Finely chiseled bust depicting a dignitary.",
+      wo: "Buste bu yomb bu nekk ni nit ku mag ci mbooloo."
+    },
+    period: { fr: "XVIIe siècle", en: "17th Century", wo: "17e siècle" },
+    culture: { fr: "Djolof", en: "Djolof", wo: "Djolof" },
+    origin: { fr: "Vallée du Fleuve Sénégal", en: "Senegal River Valley", wo: "Waalo, Senegaal" },
+    materials: { fr: "Bronze", en: "Bronze", wo: "Bronze" },
+    dimensions: { fr: "30 cm  20 cm  18 cm", en: "30 cm  20 cm  18 cm", wo: "30 cm  20 cm  18 cm" },
+    image: artworkBronze,
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/bronze-001-fr.mp3",
+    historicalContext: {
+      fr: "Les ateliers régaliens perfectionnaient les techniques de fonderie.",
+      en: "Royal workshops perfected foundry techniques.",
+      wo: "Atelier yu boroom réew dañu def liggéey fondu bu gën a baax."
+    },
+    culturalSignificance: {
+      fr: "Marque du prestige et de l'autorité.",
+      en: "Mark of prestige and authority.",
+      wo: "Màkkanu yaatu ak boroom njégg."
+    },
+    qrCode: "MCN-BRONZE-002",
+    location: { floor: "1er étage", room: "Salle Royale", position: "Piédestal B-2" },
+    curator: { fr: "Équipe de conservation", en: "Conservation team", wo: "Équipe conservation" },
+    acquisition: { fr: "Don institutionnel, 2022", en: "Institutional donation, 2022", wo: "Don institutionnel, 2022" },
+    relatedArtworks: ["mcn-bronze-001"],
+    tags: ["bronze", "sculpture"]
+  },
+  {
+    id: "mcn-textile-002",
+    title: { fr: "Textile Rituel Sérère", en: "Serer Ritual Textile", wo: "Textile Rituel bu Seereer" },
+    description: {
+      fr: "Pièce textile utilisée lors de rituels d'initiation.",
+      en: "Textile piece used during initiation rituals.",
+      wo: "Textile bu ñu jëfandikoo ci rites d'initiation."
+    },
+    period: { fr: "Fin XIXe siècle", en: "Late 19th Century", wo: "Xew-Xew 19e siècle" },
+    culture: { fr: "Sérère", en: "Serer", wo: "Seereer" },
+    origin: { fr: "Sine-Saloum, Sénégal", en: "Sine-Saloum, Senegal", wo: "Sine-Saloum, Senegaal" },
+    materials: { fr: "Coton, teintures naturelles", en: "Cotton, natural dyes", wo: "Coton, teintures naturelles" },
+    dimensions: { fr: "160 cm  100 cm", en: "160 cm  100 cm", wo: "160 cm  100 cm" },
+    image: artworkTextile,
+    hasAudio: true,
+    audioUrl: "/src/assets/audio/textile-001-fr.mp3",
+    historicalContext: {
+      fr: "Le textile accompagnait les grandes étapes de la vie sociale.",
+      en: "Textile accompanied major milestones of social life.",
+      wo: "Textile bi dañu ko bokk ci jamono yu mag ci dundin."
+    },
+    culturalSignificance: {
+      fr: "Transmission des savoirs et des lignées.",
+      en: "Transmission of knowledge and lineages.",
+      wo: "Yokkale xam-xam ak xeetu njaboot."
+    },
+    qrCode: "MCN-TEXTILE-002",
+    location: { floor: "2e étage", room: "Salle des Textiles", position: "Vitrine B-8" },
+    curator: { fr: "Équipe de conservation", en: "Conservation team", wo: "Équipe conservation" },
+    acquisition: { fr: "Achat, 2023", en: "Purchase, 2023", wo: "Jend, 2023" },
+    relatedArtworks: ["mcn-textile-001"],
+    tags: ["textile", "rituel", "sérère"]
+  }
+];

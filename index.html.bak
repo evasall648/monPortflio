@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Awa Sall</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/mobile-menu.css">
+</head>
+<body class="bg-gray-50">
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">        
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#home" class="text-3xl md:text-4xl font-serif italic text-blue-500 hover:text-blue-600 transition-all duration-300">AWA SALL</a>
+            
+            <!-- Navigation mobile -->
+            <div class="md:hidden">
+                <!-- Bouton du menu -->
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                
+                <!-- Menu de navigation mobile -->
+                <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-50 pt-16 px-6">
+                    <nav class="flex flex-col space-y-4">
+                        <a href="#home" class="block py-3 text-lg text-gray-800 hover:text-blue-600 border-b border-gray-100">Accueil</a>
+                        <a href="#about" class="block py-3 text-lg text-gray-800 hover:text-blue-600 border-b border-gray-100">À propos</a>
+                        <a href="#competences" class="block py-3 text-lg text-gray-800 hover:text-blue-600 border-b border-gray-100">Compétences</a>
+                        <a href="#MesProjet" class="block py-3 text-lg text-gray-800 hover:text-blue-600 border-b border-gray-100">Projets</a>
+                        <a href="#contact" class="block py-3 text-lg text-gray-800 hover:text-blue-600">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative px-2">
+                    <span class="relative z-10">Accueil</span>
+                </a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative px-2">
+                    <span class="relative z-10">À propos</span>
+                </a>
+                <a href="#competences" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative px-2">
+                    <span class="relative z-10">Compétences</span>
+                </a>
+                <a href="#MesProjet" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative px-2">
+                    <span class="relative z-10">Projets</span>
+                </a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-300 relative px-2">
+                    <span class="relative z-10">Contact</span>
+                </a>
+            </div>
+            
+            <!-- Menu Mobile amélioré -->
+            <div id="mobile-menu" class="md:hidden fixed inset-0 z-50 transform -translate-x-full transition-transform duration-500 ease-in-out">
+                <!-- Arrière-plan flou -->
+                <div class="fixed inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm" id="mobile-menu-backdrop"></div>
+                
+                <!-- Conteneur du menu -->
+                <div class="relative h-full w-80 bg-white shadow-2xl transform transition-all duration-500 ease-in-out flex flex-col">
+                    <!-- En-tête du menu -->
+                    <div class="flex items-center justify-between p-6 border-b border-gray-100">
+                        <span class="text-2xl font-bold text-gray-800">Menu</span>
+                        <button id="close-menu" class="text-gray-500 hover:text-gray-700 focus:outline-none transition-colors duration-200">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Liens de navigation -->
+                    <nav class="flex-1 overflow-y-auto py-6 px-4">
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="#home" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 group" onclick="closeMobileMenu()">
+                                    <i class="fas fa-home w-6 text-center mr-3 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                                    <span class="font-medium">Accueil</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#about" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 group" onclick="closeMobileMenu()">
+                                    <i class="fas fa-user w-6 text-center mr-3 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                                    <span class="font-medium">À propos</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#competences" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 group" onclick="closeMobileMenu()">
+                                    <i class="fas fa-code w-6 text-center mr-3 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                                    <span class="font-medium">Compétences</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#MesProjet" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 group" onclick="closeMobileMenu()">
+                                    <i class="fas fa-project-diagram w-6 text-center mr-3 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                                    <span class="font-medium">Projets</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="flex items-center p-3 rounded-lg text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 group" onclick="closeMobileMenu()">
+                                    <i class="fas fa-envelope w-6 text-center mr-3 text-blue-500 group-hover:scale-110 transition-transform"></i>
+                                    <span class="font-medium">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Réseaux sociaux -->
+                        <div class="mt-12 pt-6 border-t border-gray-100">
+                            <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4 px-3">Me suivre</h3>
+                            <div class="flex space-x-4 px-3">
+                                <a href="https://www.linkedin.com/in/awa-sall-72b879315/" target="_blank" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="https://github.com/yourusername" target="_blank" class="text-gray-500 hover:text-gray-900 transition-colors duration-300">
+                                    <i class="fab fa-github text-xl"></i>
+                                </a>
+                                <a href="https://twitter.com/yourusername" target="_blank" class="text-gray-500 hover:text-blue-400 transition-colors duration-300">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+                    
+                    <!-- Pied de page du menu -->
+                    <div class="p-4 border-t border-gray-100 text-center text-sm text-gray-500">
+                        <p>© 2023 Awa Sall. Tous droits réservés.</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="relative h-screen pt-24">
+        <video autoplay loop muted id="hero-video" class="w-full h-full object-cover z-0">
+            <source src="image/eva2.mp4" type="video/mp4"> 
+            Désolé, votre navigateur ne supporte pas la lecture vidéo.
+        </video>
+        <div class="hero-content relative z-10 text-center text-white p-12">
+            <h1 class="text-4xl md:text-6xl font-bold animated-text">AWA SALL</h1>
+            <h3 class="text-xl md:text-2xl animated-slogan">Passionnée par le design et l’innovation</h3>
+            <a href="#MesProjet" class="btn inline-block mt-12 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700">Découvrir mon travail</a>
+            <a href="image/CV.pdf" download class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-full transition-all duration-300 hover:bg-blue-700">Télécharger mon CV</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-gray-100 relative overflow-hidden">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center justify-between gap-12">
+            <div class="lg:w-1/2 flex justify-center relative">
+                <div class="absolute w-[500px] h-[500px] lg:w-[600px] lg:h-[600px] bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur-3xl opacity-40" style="transform: translate(-50%, -20%); left: 50%;"></div>
+                <img src="image/EVA2.jpg" alt="Photo de profil" loading="lazy" class="w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] rounded-full object-cover" style="clip-path: circle(50% at 50% 50%);">
+            </div>
+            <div class="lg:w-1/2 text-center lg:text-left">
+                <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">À propos de moi</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">Étudiante en Génie Informatique à l’Université Professionnelle de Dakar, je suis passionnée par la programmation et le développement web. J’aime résoudre des problèmes complexes et créer des solutions innovantes.</p>
+                <div class="fun-facts grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <span class="text-4xl font-extrabold">1+</span>
+                        <p class="text-lg mt-2">Année d'expérience</p>
+                    </div>
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <span class="text-4xl font-extrabold">10+</span>
+                        <p class="text-lg mt-2">Projets réalisés</p>
+                    </div>
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                        <span class="text-4xl font-extrabold">5+</span>
+                        <p class="text-lg mt-2">Compétences clés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="MesProjet" class="py-16 px-4 sm:px-6 md:px-8 bg-gray-100">
+        <h2 class="text-3xl md:text-4xl font-semibold text-center text-gray-900 mb-4">Mes Projets</h2>
+        
+        <!-- Filtres par technologie avec animations -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12 px-4 animate__animated animate__fadeIn">
+            <button class="filter-btn px-6 py-2.5 rounded-full font-medium active" data-filter="all">
+                <i class="fas fa-layer-group mr-2"></i>Tous les projets
+            </button>
+            <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="java">
+                <i class="fab fa-java mr-2"></i>Java
+            </button>
+            <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="python">
+                <i class="fab fa-python mr-2"></i>Python
+            </button>
+            <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="javascript">
+                <i class="fab fa-js-square mr-2"></i>JavaScript
+            </button>
+            <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="react">
+                <i class="fab fa-react mr-2"></i>React
+            </button>
+            <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="database">
+                <i class="fas fa-database mr-2"></i>Base de données
+            </button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Projet IMMO -->
+            <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
+                 data-category="react javascript typescript database"
+                 style="animation-delay: 0.1s;">
+                <img src="image/projets/IMMO/preview.gif" alt="Application Immobilière" loading="lazy" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Application Immobilière</h3>
+                    <p class="text-gray-700 text-sm mb-4">Application web complète de gestion immobilière avec interface moderne. Fonctionnalités : gestion des biens, visites et utilisateurs avec rôles (admin, agent, locataire). L'administration permet la gestion complète, les agents gèrent les visites et les biens, et les locataires peuvent réserver et suivre leurs visites. Développée avec React, TypeScript, Vite et Node.js pour une expérience utilisateur optimale.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/agence-immobiliere" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Projet BIBLIO -->
+            <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
+                 data-category="java database"
+                 style="animation-delay: 0.2s;">
+                <img src="image/projets/BIBLIO/preview.jpg" alt="Application de Gestion de Bibliothèque" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Gestion de Bibliothèque</h3>
+                    <p class="text-gray-700 text-sm mb-4">Application Java complète de gestion de bibliothèque avec interface graphique. Fonctionnalités : gestion des adhérents, des documents, des emprunts, des réservations et des statistiques. Développée avec Java Swing pour une expérience utilisateur fluide et intuitive.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/gestion-bibliotheque" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Projet UNIBANK -->
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/projets/UNIBANK/preview.jpg" alt="Application Bancaire UNIBANK" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">UNIBANK - Gestion Bancaire</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète de gestion bancaire avec une interface utilisateur moderne et intuitive. Fonctionnalités : consultation de solde, virements, historique des transactions, et tableau de bord personnalisé. Développée avec les dernières technologies web pour une expérience utilisateur fluide et sécurisée.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="http://127.0.0.1:5500/mes-projets/unibank/accueil.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/unibank" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Projet MCN -->
+            <div class="project-card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
+                 data-category="react typescript"
+                 style="animation-delay: 0.3s;">
+                <img src="image/projets/MCN/preview.jpg" alt="Musée des Civilisations Noires - Application Web" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Musée des Civilisations Noires</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète pour la gestion et la découverte des collections du Musée des Civilisations Noires. Fonctionnalités principales : catalogue numérique des œuvres, visites virtuelles, réservation de billets, gestion des expositions temporaires. Développée avec React, TypeScript et Vite pour des performances optimales.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/musee-civilisations-noires" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/projets/UNISANTE/preview.png" alt="Application UNISANTE - Gestion médicale complète" loading="lazy" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">UNISANTE - Gestion Médicale</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète de gestion médicale avec authentification sécurisée, tableau de bord administrateur, gestion des rendez-vous et suivi des patients. Développée avec React, TypeScript, Tailwind CSS et Node.js. Fonctionnalités : prise de rendez-vous en ligne, gestion des dossiers médicaux, messagerie sécurisée et rapports statistiques.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/unisante" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/pro1.jpeg" alt="Capture d'écran du site web d'une agence immobilière" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Françoise & Eva - Agence immobilière</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Développement d'un site vitrine moderne pour une agence immobilière avec recherche avancée de biens, galerie d'images haute résolution et formulaire de contact interactif. Technologies utilisées : HTML5, CSS3, JavaScript, et intégration de cartes interactives.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="mes-projets/agence-immobiliere/PROJETHTML/Accueil.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/agence-immobiliere" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/pro2.jpeg" alt="Capture d'écran de l'application web JavaScript" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Application Web - JavaScript</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application éducative interactive offrant des exercices pratiques de JavaScript avec correction automatique. Fonctionnalités : suivi de progression, niveaux de difficulté, et exemples de code modifiables en temps réel. Parfait pour l'apprentissage du JavaScript moderne (ES6+).</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="mes-projets/application-javascript/application.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/javascript-app" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/pro3.jpg" alt="Capture d'écran de l'application simulant un système de transport" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">VehiculeProjet</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Simulation complète d'un système de transport urbain en Java, incluant la gestion de flotte de véhicules, calcul d'itinéraires optimaux et suivi en temps réel. Architecture orientée objet avec design patterns adaptés aux systèmes complexes.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/vehicule-projet" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="image/mysql.jpg" alt="Capture d'écran de l'application de recensement Sénégal" loading="lazy" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Application recensement Sénégal</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application complète de gestion de données de recensement avec interface graphique Tkinter. Fonctionnalités : saisie sécurisée des données, génération de rapports statistiques, export/import de données, et tableaux de bord interactifs. Architecture client-serveur avec SQL Server pour une gestion optimale des données massives.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/recensement-senegal" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Projet Python - Suite d'outils -->
+            <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl">
+                <img src="mes-projets/python/image/imc.jpg" alt="Suite d'outils Python - Calcul d'IMC et analyse de texte" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
+                <div class="project-info p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Suite d'Outils Python</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application complète développée en Python avec Tkinter offrant plusieurs fonctionnalités : calcul d'IMC avec suivi visuel, analyse de texte avancée, et traitement de fichiers PDF. Interface utilisateur intuitive avec onglets, système d'activation sécurisé, et génération de graphiques. Parfait pour la gestion de données médicales et l'analyse documentaire.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/outils-python" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                        <i class="fab fa-github text-xl mr-2"></i>
+                        <span class="text-sm font-medium whitespace-nowrap">Code</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="py-12 px-4 bg-white">
+        <h2 class="text-3xl font-semibold text-center text-gray-900 mb-8">Mes Compétences</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-laptop-code text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Langages de programmation</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+                <p class="text-gray-600">C, Java, Python, PHP, JavaScript, TypeScript</p>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-globe text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Développement web</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+                <p class="text-gray-600">HTML, CSS, React, TailwindCSS, Laravel, Node.js (bases), MAMP</p>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-database text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Bases de données</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+                <p class="text-gray-600">SQL, MySQL</p>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-project-diagram text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Algorithmique</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 88%"></div>
+                </div>
+                <p class="text-gray-600">Conception, optimisation et structuration de données</p>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-desktop text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Systèmes d'exploitation</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 82%"></div>
+                </div>
+                <p class="text-gray-600">Linux, Windows</p>
+            </div>
+            
+            <div class="p-6 bg-gray-50 rounded-xl shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-tools text-2xl text-blue-600 mr-3"></i>
+                    <h3 class="text-xl font-semibold text-gray-800">Outils de développement</h3>
+                </div>
+                <div class="w-full bg-gray-200 h-2 rounded-full mb-3">
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+                <p class="text-gray-600">Visual Studio Code, Git/GitHub, Docker, Kubernetes</p>
+            </div>
+
+            <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <i class="fas fa-search fa-4x text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-medium">SEO & Marketing numérique</h3>
+                <div class="w-full bg-gray-300 dark:bg-gray-600 h-2 rounded-full">
+                    <div class="bg-blue-500 h-2 w-65"></div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">Optimisation des moteurs de recherche et stratégie de contenu.</p>
+            </div>
+
+            <div class="p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <i class="fas fa-project-diagram fa-4x text-blue-600 mb-4"></i>
+                <h3 class="text-xl font-medium">Gestion de projet</h3>
+                <div class="w-full bg-gray-300 dark:bg-gray-600 h-2 rounded-full">
+                    <div class="bg-blue-500 h-2 w-60"></div>
+                </div>
+                <p class="text-gray-600 dark:text-gray-300">Gestion de projets avec méthodologies agiles.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
+        <h2 class="text-3xl font-semibold text-center text-gray-900 dark:text-white mb-12">Contactez-moi</h2>
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <div class="flex flex-col lg:flex-row justify-between items-stretch lg:space-x-12 space-y-10 lg:space-y-0">
+                <div class="w-full lg:w-1/2 bg-white dark:bg-gray-700 p-8 rounded-lg shadow-lg flex flex-col justify-between">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-6">Envoyez-moi un message</h3>
+                    <form action="#" method="POST" class="space-y-6 flex-grow">
+                        <input type="text" name="name" class="w-full p-4 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 dark:text-white" placeholder="Votre nom" required>
+                        <input type="email" name="email" class="w-full p-4 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 dark:text-white" placeholder="Votre email" required>
+                        <textarea name="message" class="w-full p-4 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none text-gray-900 dark:text-white" rows="6" placeholder="Votre message" required></textarea>
+                        <button type="submit" class="w-full p-4 bg-blue-600 text-white rounded-lg font-semibold text-lg transition-all duration-300 hover:bg-blue-700">Envoyer</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 flex items-center">
+                    <div class="w-full h-full overflow-hidden rounded-lg shadow-lg">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17543.01892314138!2d-17.36666133944324!3d14.77324491715677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2ssn!4v1737500359874!5m2!1sfr!2ssn" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg h-full" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="temoignages" class="py-20 bg-gray-100 dark:bg-gray-800">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-white">Témoignages</h2>
+        <div class="relative overflow-x-auto">
+            <div class="testimonial-container flex space-x-8">
+                <!-- Témoignage 1 -->
+                <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-xl w-80 flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="image/t1.jpg" alt="Marie D." loading="lazy" class="w-24 h-24 rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out hover:scale-110">
+                    <div class="flex justify-center mb-4">
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-gray-300">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-center transition duration-300 ease-in-out hover:text-blue-600">Awa est une développeuse passionnée et extrêmement talentueuse. Travailler avec elle est un véritable plaisir.</p>
+                    <p class="font-semibold text-blue-600 text-center mt-4">Marie D.</p>
+                    <p class="text-gray-500 text-center">Client</p>
+                </div>
+                <!-- Témoignage 2 -->
+                <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-xl w-80 flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="image/t2.jpg" alt="Paul S." class="w-24 h-24 rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out hover:scale-110">
+                    <div class="flex justify-center mb-4">
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-gray-300">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-center transition duration-300 ease-in-out hover:text-blue-600">Grâce à Awa, notre projet a pris vie de manière exceptionnelle. Ses compétences sont remarquables.</p>
+                    <p class="font-semibold text-blue-600 text-center mt-4">Mouhamed S.</p>
+                    <p class="text-gray-500 text-center">Entrepreneur</p>
+                </div>
+                <!-- Témoignage 3 -->
+                <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-xl w-80 flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="image/t3.jpg" alt="Sophie L." class="w-24 h-24 rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out hover:scale-110">
+                    <div class="flex justify-center mb-4">
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-gray-300">&#9733;</span>
+                        <span class="text-gray-300">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-center transition duration-300 ease-in-out hover:text-blue-600">Je recommande vivement Awa pour ses services professionnels et sa capacité à comprendre les besoins du client.</p>
+                    <p class="font-semibold text-blue-600 text-center mt-4">Sophie L.</p>
+                    <p class="text-gray-500 text-center">Manager</p>
+                </div>
+                <!-- Témoignage 4 -->
+                <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-xl w-80 flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="image/t4.jpg" alt="Jean P." loading="lazy" class="w-24 h-24 rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out hover:scale-110">
+                    <div class="flex justify-center mb-4">
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-gray-300">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-center transition duration-300 ease-in-out hover:text-blue-600">Une développeuse de talent, toujours à l'écoute et soucieuse de délivrer un travail de qualité. Je suis très satisfait des résultats.</p>
+                    <p class="font-semibold text-blue-600 text-center mt-4">Francoise</p>
+                    <p class="text-gray-500 text-center">Consultant</p>
+                </div>
+                <!-- Témoignage 5 -->
+                <div class="testimonial-card bg-white dark:bg-gray-700 p-8 rounded-xl shadow-xl w-80 flex-shrink-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <img src="image/t5.jpg" alt="Lucas T." class="w-24 h-24 rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out hover:scale-110">
+                    <div class="flex justify-center mb-4">
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                        <span class="text-yellow-400">&#9733;</span>
+                    </div>
+                    <p class="text-gray-700 dark:text-gray-300 text-center transition duration-300 ease-in-out hover:text-blue-600">"Awa a su comprendre parfaitement nos besoins. Son expertise nous a permis de lancer notre projet avec succès."</p>
+                    <p class="font-semibold text-blue-600 text-center mt-4">Lucas T.</p>
+                    <p class="text-gray-500 text-center">CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+            <div class="social-icons flex flex-col">
+                <h2 class="text-2xl font-serif italic text-blue-500 mb-4 hover:text-white transition-all duration-300">Réseaux sociaux</h2>
+                <ul class="space-y-2">
+                    <li><a href="https://www.linkedin.com/in/awa-sall-72b879315/" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-blue-500"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://github.com/evasall648?tab=repositories" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-blue-500"><i class="fab fa-github"></i> GitHub</a></li>
+                    <li><a href="https://www.facebook.com" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-blue-500"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-blue-500"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://www.whatsapp.com" target="_blank" class="flex items-center gap-2 transition-all duration-300 hover:text-blue-500"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links flex flex-col">
+                <h2 class="text-2xl font-serif italic text-blue-500 mb-4 hover:text-white transition-all duration-300">Liens rapides</h2>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="transition-all duration-300 hover:text-blue-500">Accueil</a></li>
+                    <li><a href="#about" class="transition-all duration-300 hover:text-blue-500">À propos</a></li>
+                    <li><a href="#competences" class="transition-all duration-300 hover:text-blue-500">Compétences</a></li>
+                    <li><a href="#MesProjet" class="transition-all duration-300 hover:text-blue-500">Mes Projets</a></li>
+                    <li><a href="#contact" class="transition-all duration-300 hover:text-blue-500">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contacts flex flex-col">
+                <h2 class="text-2xl font-serif italic text-blue-500 mb-4 hover:text-white transition-all duration-300">Contact</h2>
+                <ul class="space-y-4">
+                    <li><a href="mailto:evasall648@gmail.com" class="text-white hover:text-blue-500 transition-all duration-300">evasall648@gmail.com</a></li>
+                    <li><span class="text-white hover:text-blue-500 transition-all duration-300">Dakar, Sénégal, Yembeul</span></li>
+                </ul>
+            </div>
+
+            <div class="newsletter flex flex-col">
+                <h2 class="text-2xl font-serif italic text-blue-500 mb-4 hover:text-white transition-all duration-300">Inscrivez-vous</h2>
+                <p class="text-gray-300 text-sm mb-4">Recevez nos dernières nouvelles directement dans votre boîte mail.</p>
+                <form action="mailto:evasall648@gmail.com" method="post" enctype="text/plain" class="space-y-3">
+                    <input type="email" name="email" placeholder="Entrez votre email" required class="w-full p-2 rounded-md bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600 hover:bg-gray-600 transition-all duration-300">
+                    <button type="submit" class="w-full p-2 bg-blue-600 text-white rounded-md hover:bg-blue-500 transition-all duration-300">S'abonner</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="text-center text-gray-400 text-sm py-4 border-t border-gray-700 mt-8">
+            <p>&copy; 2025 Mademoiselle Awa Sall. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Bouton de retour en haut -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 transform translate-y-20 opacity-0 z-40">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
