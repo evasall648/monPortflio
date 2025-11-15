@@ -146,8 +146,10 @@
         <div class="hero-content absolute inset-0 z-10 text-center text-white p-12 flex flex-col justify-center items-center">
             <h1 class="text-4xl md:text-6xl font-bold animated-text">AWA SALL</h1>
             <h3 class="text-xl md:text-2xl animated-slogan">Passionnée par le design et l’innovation</h3>
-            <a href="#MesProjet" class="btn block mt-12 bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 text-center">Découvrir mon travail</a>
-            <a href="image/CV.pdf" download class="block mt-4 px-6 py-2 bg-blue-600 text-white rounded-full transition-all duration-300 hover:bg-blue-700 text-center">Télécharger mon CV</a>
+            <div class="flex flex-col sm:flex-row gap-4 mt-12 justify-center">
+                <a href="#MesProjet" class="btn bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 text-center">Découvrir mon travail</a>
+                <a href="image/CV.pdf" download class="px-6 py-2 bg-blue-600 text-white rounded-full transition-all duration-300 hover:bg-blue-700 text-center">Télécharger mon CV</a>
+            </div>
         </div>
     </section>
 
@@ -158,20 +160,27 @@
                 <img src="image/EVA2.jpg" alt="Photo de profil" loading="lazy" width="600" height="600" class="w-[450px] h-[450px] lg:w-[600px] lg:h-[600px] rounded-full object-cover" style="clip-path: circle(50% at 50% 50%);">
             </div>
             <div class="lg:w-1/2 text-center lg:text-left">
-                <h2 class="text-5xl font-extrabold text-gray-900 mb-6 leading-tight">À propos de moi</h2>
-                <p class="text-lg text-gray-700 mb-8 leading-relaxed">Étudiante en Génie Informatique à l’Université Professionnelle de Dakar, je suis passionnée par la programmation et le développement web. J’aime résoudre des problèmes complexes et créer des solutions innovantes.</p>
-                <div class="fun-facts grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+<h2 class="text-5xl font-extrabold text-gray-900 mb-14 leading-tight">
+  À propos de moi
+</h2>
+<p class="text-lg leading-loose mb-8 font-medium text-justify text-gray-700">
+  Étudiante en Génie Informatique à l’Université Professionnelle de Dakar, je nourris une véritable passion pour la programmation et le développement web. 
+  J’aime relever des défis techniques, analyser et résoudre des problèmes complexes afin de concevoir des solutions innovantes. 
+  Curieuse et motivée, je cherche constamment à explorer de nouvelles technologies tout en perfectionnant mes compétences en développement full‑stack 
+  et en conception d’interfaces utilisateur modernes, intuitives et performantes.
+</p>
+                <div class="fun-facts grid grid-cols-2 md:grid-cols-3 gap-14 mt-16">
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-10 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
                         <span class="text-4xl font-extrabold">3+</span>
-                        <p class="text-lg mt-2">Année d'expérience</p>
+                        <p class="text-lg mt-4">Année d'expérience</p>
                     </div>
-                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-10 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
                         <span class="text-4xl font-extrabold">10+</span>
-                        <p class="text-lg mt-2">Projets réalisés</p>
+                        <p class="text-lg mt-4">Projets réalisés</p>
                     </div>
-                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+                    <div class="fun-fact text-center bg-gradient-to-br from-blue-500 to-purple-600 text-white p-10 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
                         <span class="text-4xl font-extrabold">5+</span>
-                        <p class="text-lg mt-2">Compétences clés</p>
+                        <p class="text-lg mt-4">Compétences clés</p>
                     </div>
                 </div>
             </div>
@@ -199,68 +208,74 @@
                 <i class="fab fa-react mr-2"></i>React
             </button>
             <button class="filter-btn px-6 py-2.5 bg-white text-gray-800 border border-gray-200 rounded-full font-medium hover:border-transparent" data-filter="database">
-                <i class="fas fa-database mr-2"></i>Base de donnÃ©es
+                <i class="fas fa-database mr-2"></i>Base de données
             </button>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Section 1: Première ligne de 3 projets -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-12">
             <!-- Projet IMMO -->
             <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
                  data-category="react javascript typescript database"
                  style="animation-delay: 0.1s;">
                 <img src="image/projets/IMMO/preview.gif" alt="Application Immobilière" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Application Immobilière</h3>
-                    <p class="text-gray-700 text-sm mb-4">Application web complète de gestion immobilière avec interface moderne. Fonctionnalités : gestion des biens, visites et utilisateurs avec rôles (admin, agent, locataire). L'administration permet la gestion complète, les agents gèrent les visites et les biens, et les locataires peuvent réserver et suivre leurs visites. Développée avec React, TypeScript, Vite et Node.js pour une expérience utilisateur optimale.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Application Immobilière Complète</h3>
+                    <p class="text-gray-700 text-lg leading-loose mb-8 font-medium text-justify">Application web complète de gestion immobilière avec interface moderne et responsive. Fonctionnalités : gestion des biens, visites et utilisateurs avec rôles (admin, agent, locataire). L'administration permet la gestion complète, les agents gèrent les visites et les biens, et les locataires peuvent réserver et suivre leurs visites. Développée avec React, TypeScript, Vite et Node.js pour une expérience utilisateur optimale, sécurisée et professionnelle avec authentification multi-niveaux.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/agence-immobiliere" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                    <span class="btn-project inline-flex items-center justify-center bg-gray-400 text-white px-6 py-3 rounded-lg cursor-not-allowed transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/agence-immobiliere" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
                 </div>
             </div>
-            
+
             <!-- Projet BIBLIO -->
             <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
                  data-category="java database"
                  style="animation-delay: 0.2s;">
                 <img src="image/projets/BIBLIO/preview.jpg" alt="Application de Gestion de Bibliothèque" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Gestion de Bibliothèque</h3>
-                    <p class="text-gray-700 text-sm mb-4">Application Java complète de gestion de bibliothèque avec interface graphique. Fonctionnalités : gestion des adhérents, des documents, des emprunts, des réservations et des statistiques. Développée avec Java Swing pour une expérience utilisateur fluide et intuitive.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Système de Gestion de Bibliothèque</h3>
+                    <p class="text-gray-700 text-lg leading-loose mb-8 font-medium text-justify">Application Java complète de gestion de bibliothèque avec interface graphique moderne et intuitive. Fonctionnalités : gestion des adhérents, des documents, des emprunts, des réservations et des statistiques détaillées. Développée avec Java Swing pour une expérience utilisateur fluide, intuitive et professionnelle avec système de notifications automatiques et rapports personnalisés.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/gestion-bibliotheque" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                    <span class="btn-project inline-flex items-center justify-center bg-gray-400 text-white px-6 py-3 rounded-lg cursor-not-allowed transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/gestion-bibliotheque" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
                 </div>
             </div>
+
             <!-- Projet UNIBANK -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="java javascript database">
                 <img src="image/projets/UNIBANK/preview.jpg" alt="Application Bancaire UNIBANK" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">UNIBANK - Gestion Bancaire</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète de gestion bancaire avec une interface utilisateur moderne et intuitive. Fonctionnalités : consultation de solde, virements, historique des transactions, et tableau de bord personnalisé. Développée avec les dernières technologies web pour une expérience utilisateur fluide et sécurisée.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">UNIBANK - Plateforme Bancaire Digitale</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Application web complète de gestion bancaire avec une interface utilisateur moderne et intuitive. Fonctionnalités : consultation de solde, virements, historique des transactions, et tableau de bord personnalisé. Développée avec les dernières technologies web pour une expérience utilisateur fluide, sécurisée et performante avec cryptage des données et conformité RGPD.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
-                    <a href="http://127.0.0.1:5500/temp-mes-projets/unibank/particuliers.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/unibank" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                    <a href="http://127.0.0.1:5500/temp-mes-projets/unibank/particuliers.html" target="_blank" class="btn-project inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</a>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/unibank" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
                 </div>
             </div>
+        </div>
+
+        <!-- Section 2: Deuxième ligne de 3 projets -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mb-12">
             <!-- Projet MCN -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden hover-scale transform transition-all duration-500" 
                  data-category="react typescript"
                  style="animation-delay: 0.3s;">
                 <img src="image/projets/MCN/preview.jpg" alt="Musée des Civilisations Noires - Application Web" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Musée des Civilisations Noires</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète pour la gestion et la découverte des collections du Musée des Civilisations Noires. Fonctionnalités principales : catalogue numérique des œuvres, visites virtuelles, réservation de billets, gestion des expositions temporaires. Développée avec React, TypeScript et Vite pour des performances optimales.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Musée des Civilisations Noires - Platform</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Application web complète pour la gestion et la découverte des collections du Musée des Civilisations Noires. Fonctionnalités principales : catalogue numérique des œuvres, visites virtuelles 360°, réservation de billets, gestion des expositions temporaires. Développée avec React, TypeScript et Vite pour des performances optimales et une navigation agréable avec multimédia intégré.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
                     <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
@@ -270,11 +285,13 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Projet UNISANTE -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="react typescript database">
                 <img src="image/projets/UNISANTE/preview.png" alt="Capture d'écran de l'application UNISANTE - Gestion médicale complète" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">UNISANTE - Gestion Médicale</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application web complète de gestion médicale avec authentification sécurisée, tableau de bord administrateur, gestion des rendez-vous et suivi des patients. Développée avec React, TypeScript, Tailwind CSS et Node.js. Fonctionnalités : prise de rendez-vous en ligne, gestion des dossiers médicaux, messagerie sécurisée et rapports statistiques.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">UNISANTE - Système Médical Complet</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Application web complète de gestion médicale avec authentification sécurisée, tableau de bord administrateur, gestion des rendez-vous et suivi des patients. Développée avec React, TypeScript, Tailwind CSS et Node.js. Fonctionnalités : prise de rendez-vous en ligne, gestion des dossiers médicaux, messagerie sécurisée et rapports statistiques détaillés avec télémédecine intégrée.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
                     <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
@@ -284,11 +301,13 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Projet Agence Immobilière -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="react typescript database">
                 <img src="image/pro1.jpeg" alt="Capture d'écran du site web d'une agence immobilière" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Françoise & Eva - Agence immobilière</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Développement d'un site vitrine moderne pour une agence immobilière avec recherche avancée de biens, galerie d'images haute résolution et formulaire de contact interactif. Technologies utilisées : HTML5, CSS3, JavaScript, et intégration de cartes interactives.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Françoise & Eva - Agence Premium</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Développement d'un site vitrine moderne pour une agence immobilière avec recherche avancée de biens, galerie d'images haute résolution et formulaire de contact interactif. Technologies utilisées : HTML5, CSS3, JavaScript, et intégration de cartes interactives pour une expérience utilisateur immersive et professionnelle avec SEO optimisé et analytics.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
                     <a href="http://127.0.0.1:5500/temp-mes-projets/agence-immobiliere/PROJETHTML/Accueil.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
@@ -298,46 +317,52 @@
                     </a>
                 </div>
             </div>
+        </div>
 
+        <!-- Section 3: Troisième ligne de 3 projets -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+            <!-- Projet JavaScript -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="javascript">
                 <img src="image/pro2.jpeg" alt="Capture d'écran de l'application web JavaScript" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Application Web - JavaScript</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application éducative interactive offrant des exercices pratiques de JavaScript avec correction automatique. Fonctionnalités : suivi de progression, niveaux de difficulté, et exemples de code modifiables en temps réel. Parfait pour l'apprentissage du JavaScript moderne (ES6+).</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">JavaScript Learning Platform</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Application éducative interactive offrant des exercices pratiques de JavaScript avec correction automatique. Fonctionnalités : suivi de progression, niveaux de difficulté, et exemples de code modifiables en temps réel. Parfait pour l'apprentissage du JavaScript moderne (ES6+) avec une pédagogie innovante et efficace, gamification et certification.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
-                    <a href="http://127.0.0.1:5500/temp-mes-projets/application-javascript/application.html" target="_blank" class="btn-project inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-all duration-300">Voir le projet</a>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/javascript-app" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                    <a href="http://127.0.0.1:5500/temp-mes-projets/application-javascript/application.html" target="_blank" class="btn-project inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</a>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/javascript-app" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
                 </div>
             </div>
 
+            <!-- Projet Java Vehicule -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="java">
                 <img src="image/pro3.jpg" alt="Capture d'écran de l'application simulant un système de transport" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">VehiculeProjet</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Simulation complète d'un système de transport urbain en Java, incluant la gestion de flotte de véhicules, calcul d'itinéraires optimaux et suivi en temps réel. Architecture orientée objet avec design patterns adaptés aux systèmes complexes.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">VehiculeProjet - Transport System</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Simulation complète d'un système de transport urbain en Java, incluant la gestion de flotte de véhicules, calcul d'itinéraires optimaux et suivi en temps réel. Architecture orientée objet avec design patterns adaptés aux systèmes complexes pour une maintenance évolutive et robuste avec algorithmes d'optimisation et intelligence artificielle.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
-                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/vehicule-projet" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                    <span class="btn-project inline-flex items-center justify-center bg-gray-400 text-white px-6 py-3 rounded-lg cursor-not-allowed transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/vehicule-projet" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
                 </div>
             </div>
 
+            <!-- Projet Recensement -->
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="database">
                 <img src="image/mysql.jpg" alt="Capture d'écran de l'application de recensement Sénégal" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Application recensement Sénégal</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application complète de gestion de données de recensement avec interface graphique Tkinter. Fonctionnalités : saisie sécurisée des données, génération de rapports statistiques, export/import de données, et tableaux de bord interactifs. Architecture client-serveur avec SQL Server pour une gestion optimale des données massives.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Recensement Sénégal - Data Platform</h3>
+                    <p class="text-gray-700 dark:text-gray-300 text-lg leading-loose mb-8 font-medium text-justify">Application complète de gestion de données de recensement avec interface graphique Tkinter. Fonctionnalités : saisie sécurisée des données, génération de rapports statistiques, export/import de données, et tableaux de bord interactifs. Architecture client-serveur avec SQL Server pour une gestion optimale des données massives et sécurisées avec backup automatique.</p>
                 </div>
                 <div class="flex space-x-4 mt-4">
-                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/recensement-senegal" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                    <span class="btn-project inline-flex items-center justify-center bg-gray-400 text-white px-6 py-3 rounded-lg cursor-not-allowed transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/recensement-senegal" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
@@ -348,12 +373,12 @@
             <div class="project-card bg-white dark:bg-gray-700 rounded-lg shadow-xl transform transition-all hover:scale-110 hover:shadow-2xl" data-category="python">
                 <img src="image/imc.jpg" alt="Suite d'outils Python - Calcul d'IMC et analyse de texte" loading="lazy" width="800" height="600" class="rounded-t-lg w-full h-80 object-cover shadow-xl transition-all duration-500 transform hover:scale-110">
                 <div class="project-info p-6">
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Analyse de Texte & Calcul d'IMC</h3>
-                    <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">Application complète développée en Python avec Tkinter offrant plusieurs fonctionnalités : calcul d'IMC avec suivi visuel, analyse de texte avancée, et traitement de fichiers PDF. Interface utilisateur intuitive avec onglets, système d'activation sécurisé, et génération de graphiques. Parfait pour la gestion de données médicales et l'analyse documentaire.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Python Suite - IMC & Text Analyzer</h3>
+                    <p class="text-gray-700 text-lg leading-loose mb-8 font-medium text-justify">Application complète développée en Python avec Tkinter offrant plusieurs fonctionnalités : calcul d'IMC avec suivi visuel, analyse de texte avancée, et traitement de fichiers PDF. Interface utilisateur intuitive avec onglets, système d'activation sécurisé, et génération de graphiques pour une expérience complète. Sauvegarde automatique des données et exportation des résultats avec machine learning intégré.</p>
                 </div>
-                <div class="flex space-x-4 mt-4">
-                    <span class="btn-project inline-block bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed transition-all duration-300">Voir le projet</span>
-                    <a href="https://github.com/evasall648/mesProjets/tree/main/outils-python" target="_blank" class="inline-flex items-center px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600" title="Voir le code source">
+                <div class="flex flex-col sm:flex-row gap-3 mt-6">
+                    <span class="btn-project inline-flex items-center justify-center bg-gray-400 text-white px-6 py-3 rounded-lg cursor-not-allowed transition-all duration-300 text-center font-medium min-w-[140px]">Voir le projet</span>
+                    <a href="https://github.com/evasall648/mesProjets/tree/main/outils-python" target="_blank" class="inline-flex items-center justify-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 font-medium min-w-[140px] text-center" title="Voir le code source">
                         <i class="fab fa-github text-xl mr-2"></i>
                         <span class="text-sm font-medium whitespace-nowrap">Code</span>
                     </a>
